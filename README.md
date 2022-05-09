@@ -93,18 +93,19 @@ ip-192-168-192-4.ap-northeast-2.compute.internal    Ready    <none>   10m   v1.2
 
 ## Lab2. Not able to resolve DNS query inside the cluster.
 
-I have deployed nginx as a deployment and exposed them with the service name called my-nginx. And then I created a new pod called busybox in order to access the exposed service with the command $ curl _http://my-nginx_ inside the pod.
-However, I couldn’t resolve ‘my-nginx’ dns from the pod ‘busybox’. 
-
-1) Why the dns query doesn’t work?
-2) Please explain in detail the workflow of resolving the dns query when curl http://my-nginx (http://my-nginx/) inside the pod.
+I have deployed nginx as a deployment and exposed them with the service name called `my-nginx`. And then I created a new pod called busybox in order to access the exposed service with the command $ curl _http://my-nginx_ inside the pod.
 
 ```
 $ kubectl apply -f ./lab2/deployment-nginx.yml
 $ kubectl expose deployment/my-nginx
 $ kubectl apply -f ./lab2/busybox.yml
 ```
-3) After fixed the dns settings, the dns was resolved correctly. However, I could see the dns query failed intermittently and it happened when the dns response has large payload. What is the root cause and how I resolve this issue?
+
+However, I couldn’t resolve `my-nginx` dns from the pod ‘busybox’. 
+
+1) Why the dns query doesn’t work and how to fix it?
+2) Please explain in detail the workflow of resolving the dns query when executing `curl http://my-nginx` inside the pod.
+3) After fixed the dns settings, the dns for `my-nginx` was resolved correctly. However, I could see the dns query failed intermittently and it happened when the dns response has large payload. What is the root cause and how I resolve this issue?
 
 
 ## Lab 3. Create a NLB type service using external controller. 
