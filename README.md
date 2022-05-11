@@ -21,6 +21,7 @@
     
 4. Modify the **TemplateURL** of Bastion in `01_main_vpc_settings.yml` with the uploaded S3 object URL.
 
+```yaml
         Bastion:
         Type: AWS::CloudFormation::Stack
         Properties:
@@ -31,7 +32,7 @@
             BastionEC2LatestAmiId: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
             BastionVPC: !Ref VPC
             BastionPublicSubnet01: !Ref PublicSubnet01
-
+```
 
 
 5. Create the Lab environment. It will take around 30 minutes.
@@ -195,6 +196,57 @@ The followings are graphs that monitor the inflow of requests for applications w
 ![image3](https://user-images.githubusercontent.com/9942737/167354959-8655935f-79c0-4eea-b33e-815996a64852.png)
 
 4) **To reduce down-time of deployment in Kubernetes,** what would you do? Describe how you implement zero-down time deployment in Kubernetes. 
+
+
+## Submit the assessment report
+
+- 메일 주소: eksworkshop@aws-cse-kr-event.awsapps.com
+- 제목: 20220521_[한글명]_[AccountID]
+   
+아래의 내용을 Text 파일 또는 MS Words 파일에 작성하여 메일에 첨부해주시기 바랍니다.
+
+```
+Lab 1. EKS worker nodes fail to join the cluster.
+
+[답변 - Please send a reply to customer in English.]
+
+[Troubleshooting 과정]
+
+
+Lab 2. Not able to resolve DNS query inside the cluster.
+
+[답변]
+1) 
+2) 
+3) 
+
+[Troubleshooting 과정]
+
+
+Lab 3. Create a NLB type service using external controller.
+
+[답변]
+1) 
+2) 
+3) 
+
+
+Lab 4. aws-node keeps failing to run
+
+[답변]
+    
+[Troubleshooting 과정]
+
+    
+Lab 5. Analyzing data from the monitoring tool
+
+[답변]
+1)
+2)
+3)
+4) 
+
+```
 
 
 ## Clean up Lab resources 
