@@ -9,17 +9,15 @@
     2. Enter a friendly name like ***workshop-ap-northeast-2***.
     3. Save the private key, make it accessible to your ssh utility of choice, and set the ownership/permissions as needed (for example, `chmod 400 <key name>.pem`).
 
-2. Download the following CloudFormation templates from git.
-    - ./cfn/01_main_vpc_settings.yml
-    - ./cfn/02_bastion_host.yml
+2. Download `eksworkshop-main.zip` file from git.
         
-3. Create an Amazon S3 bucket and upload `02_bastion_host.yml`.
+3. Create an Amazon S3 bucket and upload `./cfn/02_bastion_host.yml`.
     1. Go to  [S3 console](https://s3.console.aws.amazon.com/s3/home?region=ap-northeast-2#).
     2. Create a S3 bucket with preferred name.
-    3. Upload `02_bastion_host.yml` file as a S3 object.      
+    3. Upload `./cfn/02_bastion_host.yml` file as a S3 object.      
     4. Check properties of the object, copy Object URL.
     
-4. Modify the **TemplateURL** of Bastion in `01_main_vpc_settings.yml` with the uploaded S3 object URL.
+4. Modify the **TemplateURL** of Bastion in `./cfn/01_main_vpc_settings.yml` with the uploaded S3 object URL.
 
 ```yaml
         Bastion:
@@ -37,7 +35,7 @@
 
 5. Create the Lab environment. It will take around 30 minutes.
     1. Open [CloudFormation Console](https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-1#/stacks/new?templateURL=https://eks-workshop-2021-lab.s3-ap-northeast-1.amazonaws.com/00-eks-vpc-private-subnets.yaml&stackName=WORKSHOP).
-    2. Create a CloudFormation Stack by uploading a template file: `01_main_vpc_settings.yml`.
+    2. Create a CloudFormation Stack by uploading a template file: `./cfn/01_main_vpc_settings.yml`.
 
         * Stack name must be WORKSHOP.
         * Choose Key pair to enable ssh access to the EC2 instances. 
