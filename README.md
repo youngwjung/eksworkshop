@@ -259,8 +259,8 @@ Then, Please delete CloudFormation stacks in the following orders :
 
 ```
 1. WORKSHOP-NG
-2. eksctl-EKS-WORKSHOP-cluster
-3. eksctl-EKS-WORKSHOP-addon-iamserviceaccount-kube-system-aws-node
+2. eksctl-EKS-WORKSHOP-addon-iamserviceaccount-kube-system-aws-node
+3. eksctl-EKS-WORKSHOP-cluster
 4. WORKSHOP
 ```
 
