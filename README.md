@@ -117,7 +117,7 @@ You need a Network Load Balancer(NLB) for the service lab3-nlb-service. This ser
     * Path :  /
     * Port:  80 (TCP)
     * Interval: 20s
-    * Threshold: 2
+    * The consecutive health check successes required: 2
 * Once the traffic comes into a node, it is not going to other node to find the endpoint.
 
 1) Please complete the manifest for the service lab3-nlb-service that meets the above conditions.
@@ -182,7 +182,7 @@ Please figure out the root cause of the issue and explain how to fix it.
 
 ## Lab 5. Analyzing data from the monitoring tool
 
-The followings are graphs that monitor the inflow of requests for applications when new version of application is deployed in a Kubernetes cluster. The green color shows the requests to v1.0 and the yellow color shows the requests to v2.0. How the application was deployed? Please deduce and explain which deployment strategy was considered in each graph.
+The followings are graphs that monitor the inflow of requests for applications when new version of application is deployed in a Kubernetes cluster. The green color shows the requests to v1.0 and the yellow color shows the requests to v2.0. How the application was deployed? Please deduce and explain which deployment strategy was considered in each graph, and how implement each deployment strategy in Kubernetes.
 
 1) 
 ![image1](https://user-images.githubusercontent.com/9942737/167354689-e7a2b894-315c-4fd1-9573-b68d3f55d9a6.png)
@@ -231,9 +231,11 @@ Lab 3. Create a NLB type service using external controller.
 
 Lab 4. aws-node keeps failing to run
 
-[답변]
+[이슈원인]
     
-[Troubleshooting 과정]
+[분석과정]
+
+[해결방법]
 
     
 Lab 5. Analyzing data from the monitoring tool
