@@ -109,7 +109,7 @@ However, I couldn’t resolve `my-nginx` dns from the pod ‘busybox’.
 
 ## Lab 3. Create a NLB type service using external controller. 
 
-You need a Network Load Balancer(NLB) for the service lab3-nlb-service. This service will expose the nginx pods which were created by applying the manifest file (deployment_nginx.yml). A NLB should be created by following these rules:
+You need a Network Load Balancer(NLB) for the service lab3-nlb-service. This service will expose the nginx pods which were created by applying the manifest file (./lab2/deployment_nginx.yml). A NLB should be created by following these rules:
 
 * Should be accessible from the outside of VPC.
 * Instance mode
